@@ -6,7 +6,7 @@ let level = 0;
 let gameStarted = true;
 
 // STARTING THE GAME
-$(document).on("click", function () {
+$(document).on("keypress", function () {
   if (gameStarted) {
     $("#level-title").text("Level " + level);
     nextSequence();
