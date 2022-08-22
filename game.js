@@ -13,6 +13,13 @@ $(document).on("keypress", function () {
   }
 });
 
+$(document).on("click", function () {
+  if (gameStarted) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+  }
+});
+
 // CLICKING THE BUTTONS
 $(".btn").on("click", function () {
   let userChosenColor = $(this).attr("id");
