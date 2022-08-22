@@ -3,13 +3,14 @@ let gamePattern = [];
 let userClickerPattern = [];
 
 let level = 0;
-let gameStarted = true;
+let gameStarted = false;
 
 // STARTING THE GAME
 $(document).on("keypress", function () {
-  if (gameStarted) {
+  if (!gameStarted) {
     $("#level-title").text("Level " + level);
     nextSequence();
+    gameStarted = true;
   }
 });
 
@@ -83,5 +84,5 @@ function checkAnswer(currentLevel) {
 function startOver() {
   level = 0;
   gamePattern = [];
-  gameStarted;
+  gameStarted = true;
 }
