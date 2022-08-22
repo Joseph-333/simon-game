@@ -6,13 +6,6 @@ let level = 0;
 let gameStarted = true;
 
 // STARTING THE GAME
-$(document).on("keypress", function () {
-  if (gameStarted) {
-    $("#level-title").text("Level " + level);
-    nextSequence();
-  }
-});
-
 $(document).on("click", function () {
   if (gameStarted) {
     $("#level-title").text("Level " + level);
